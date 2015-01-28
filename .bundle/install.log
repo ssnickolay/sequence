@@ -1,0 +1,8 @@
+# Logfile created on 2015-01-28 15:06:20 +0300 by logger.rb/44203
+I, [2015-01-28T15:06:20.813920 #2260]  INFO -- : 0:  diff-lcs (1.2.5) from /Users/ssnikolay/.rvm/gems/ruby-2.1.0/specifications/diff-lcs-1.2.5.gemspec
+I, [2015-01-28T15:06:23.177909 #2260]  INFO -- : 0:  rspec-support (3.0.3) from /Users/ssnikolay/.rvm/gems/ruby-2.1.0/specifications/rspec-support-3.0.3.gemspec
+I, [2015-01-28T15:06:25.687777 #2260]  INFO -- : 0:  rspec-core (3.0.3) from /Users/ssnikolay/.rvm/gems/ruby-2.1.0/specifications/rspec-core-3.0.3.gemspec
+I, [2015-01-28T15:06:28.027176 #2260]  INFO -- : 0:  rspec-expectations (3.0.3) from /Users/ssnikolay/.rvm/gems/ruby-2.1.0/specifications/rspec-expectations-3.0.3.gemspec
+I, [2015-01-28T15:06:30.360096 #2260]  INFO -- : 0:  rspec-mocks (3.0.3) from /Users/ssnikolay/.rvm/gems/ruby-2.1.0/specifications/rspec-mocks-3.0.3.gemspec
+I, [2015-01-28T15:06:32.230231 #2260]  INFO -- : 0:  rspec (3.0.0) from /Users/ssnikolay/.rvm/gems/ruby-2.1.0/specifications/rspec-3.0.0.gemspec
+I, [2015-01-28T15:06:32.230529 #2260]  INFO -- : 0:  bundler (1.5.1) from /Users/ssnikolay/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.1.gemspec
