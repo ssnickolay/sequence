@@ -1,12 +1,5 @@
-require_relative '../simple_sequence'
+require_relative 'spec_helper'
 
-describe SimpleSequence do
-  let(:sequence) { SimpleSequence.new(6) }
-
-  subject do
-    sequence.generate
-    sequence.sequence
-  end
-
-  it { should eq %w(1 11 21 1211 111221 312211) }
+describe Sequence::Simple do
+  it { expect(described_class).to generate_correct_sequence }
 end
