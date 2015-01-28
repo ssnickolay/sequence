@@ -11,7 +11,6 @@ class SimpleSequence
     (@count - 1).times do
       new_item = get_item_by(@sequence.last)
       @sequence.push(new_item)
-      puts new_item
     end
   end
 
