@@ -1,5 +1,5 @@
 module Sequence
-  class Simple
+  class SimpleSequence
     attr_reader :sequence
 
     def initialize(count = 100)
