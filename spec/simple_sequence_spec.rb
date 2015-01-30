@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
 
-describe Sequence::SimpleSequence do
+describe SimpleSequence do
   it { expect(described_class).to generate_correct_sequence }
 end
