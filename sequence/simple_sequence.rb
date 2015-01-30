@@ -13,6 +13,8 @@ module Sequence
         new_item = get_item_by(@sequence.last)
         @sequence.push(new_item)
       end
+
+      sequence
     end
 
     private
