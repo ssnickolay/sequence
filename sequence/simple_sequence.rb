@@ -1,22 +1,16 @@
-class SimpleSequence
-  attr_reader :sequence
+require_relative 'base_sequence'
 
-  def initialize(count = 100)
-    @count = count
-  end
+class SimpleSequence < BaseSequence
 
-  def generate
-    @sequence = %w(1)
+  private
 
+  def generate_sequence
     (@count - 1).times do
       new_item = get_item_by(@sequence.last)
       @sequence.push(new_item)
     end
-
-    sequence
   end
 
-  private
 
   def get_item_by(el)
     number = el[0]

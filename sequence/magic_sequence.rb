@@ -1,13 +1,10 @@
-class MagicSequence
-  attr_reader :sequence
+require_relative 'base_sequence'
 
-  def initialize(count = 100)
-    @count = count
-    @sequence = []
-  end
+class MagicSequence < BaseSequence
 
-  def generate
-    @sequence = %w(1)
+  private
+
+  def generate_sequence
     @current_repeats = []
     @current_units = [0]
     current_el = %w(1)
@@ -16,19 +13,17 @@ class MagicSequence
       @next_units = []
       @next_repeats = []
 
-      current_el = generate_item(current_el)
+      current_el = get_item_by(current_el)
       @sequence.push(current_el.join)
 
       @current_repeats = @next_repeats
       @current_units = @next_units
     end
-
-    @sequence
   end
 
   private
 
-  def generate_item(el)
+  def get_item_by(el)
     i = 0
       [].tap do |arr|
       while i < el.count
@@ -41,7 +36,7 @@ class MagicSequence
             repeat_el = el[repeat_index]
 
             # Обрабатываем интервал от [i .. repeat_index] - там нет повторений
-            arr.concat(only_units(el, arr, i, i = repeat_index)) if i != repeat_index
+            arr.concat(add_only_units(el, arr, i, i = repeat_index)) if i != repeat_index
 
             # Ищем количество повторов
             count = find_repeat_count(el, i, repeat_el)
@@ -62,14 +57,14 @@ class MagicSequence
           end
         else
           # Обрабатываем "хвост", там не повторов
-          arr.concat(only_units(el, arr, i, i = el.count))
+          arr.concat(add_only_units(el, arr, i, i = el.count))
         end
       end
     end
   end
 
   # [2, 3, 4, 1] => [1, 2, 1, 3, 1, 4, 1, 1]
-  def only_units(el, new_el, i_current, i_next)
+  def add_only_units(el, new_el, i_current, i_next)
     # Кусок в котором нет повторов
     joined_el = el[i_current ... i_next]
 
